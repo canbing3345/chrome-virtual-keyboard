@@ -724,10 +724,10 @@ function virtualKeyboardChrome_bind_input(e, autoTrigger, focusCallback, clickCa
 }
 
 function xk_settings_load_main(response) {
-    if (response.openedFirstTime == undefined) {
-        openUrl(chrome.extension.getURL("options.html"));
-        setting_set("openedFirstTime", "true");
-    }
+    // if (response.openedFirstTime == undefined) {
+    //     openUrl(chrome.extension.getURL("options.html"));
+    //     setting_set("openedFirstTime", "true");
+    // }
     document.getElementById('virtualKeyboardChromeExtension').className = response.smallKeyboard == "true" ? "modeS" : "";
     virtualKeyboardChromeExtensionFullScreenState = response.smallKeyboard != "true";
     virtualKeyboardChromeExtensionShiftBehaviour = response.capsLock == "false";
